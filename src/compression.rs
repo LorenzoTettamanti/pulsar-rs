@@ -34,7 +34,8 @@ pub struct CompressionZlib {
 #[cfg(feature = "zstd")]
 #[derive(Clone, Copy, Debug)]
 pub struct CompressionZstd {
-    /// compression level of zstd to be used ([`zstd::compression_level_range()`])
+    /// currently only Fastest is supported for compression; 
+    /// Default/Better/Best panic are marked as unimplemented in ruzstd
     pub level: zstd::encoding::CompressionLevel,
 }
 
